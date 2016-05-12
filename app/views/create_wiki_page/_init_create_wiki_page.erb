@@ -2,8 +2,8 @@
 <script type="text/javascript">
     $(document).ready(function($) {
     if($(".wiki-page").length > 0) {
-        var newLink = $("<a href=\"#\" class=\"icon icon-add\"><%= l :title %></a>");
-        $($("#content .contextual")[0]).prepend(newLink);
+        var newLink = $("<a href=\"#\" class=\"icon icon-add button\"><%= l :title %></a>");
+        $($("ul#main_menu_top_project > li")[0]).prepend(newLink);
         $(newLink).click(function() {
             var parent = $(this).parent();
             var form = $("<form></form>");
